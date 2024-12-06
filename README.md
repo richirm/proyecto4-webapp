@@ -62,7 +62,16 @@ bug => bicho
 
 6. Terminos
    - workspace: carpeta donde estan tus proyectos
+   - SEO: Posicionamiento de tu web en los buscadores
+   - DOM: Document Object Model , la interpretacion o ejecución de mi HTML en el navegador
 
 // Reto: crear un archivo nuevo y subir al repositorio
 // Reto: crear otro archivo nuevo y subir al repositorio
 // Reto: resolver un conflicto
+
+7. Teoria CSS:
+  - Tipos de Selectores:
+    - Tipo Elemento: Ejemplo: h1, p, a, div
+    - Tipo propiedad: Ejemplo: hover, focus
+    - Tipo clase: Ejemplo .titulo
+    - Tipo identificador: Ejemplo #miId
