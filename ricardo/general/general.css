@@ -1,0 +1,47 @@
+h1 {
+    color: red;
+    font-size: 50px;
+}
+
+h2 {
+    color: green;
+}
+
+h3 {
+    color: blue;
+}
+
+p:hover {
+    font-size: 20px;
+}
+
+/* h1:hover,
+h2:hover,
+h3:hover  {
+    color: yellow;
+} */
+
+.titulo_principal {
+    font-size: 20px;
+}
+
+.titulo_principal:hover {
+    color: yellow
+}
+
+.titulo_grande {
+    font-size: 40px;
+}
+
+.titulo_pequeno {
+    font-size: 30px;
+}
+
+h1 + h2 {
+    font-family: cursive;
+}
+
+#tituloOtraCosa {
+    transform: rotate(29deg);
+    width: 200px;
+}
