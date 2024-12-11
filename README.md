@@ -72,6 +72,10 @@ bug => bicho
 7. Teoria CSS:
   - Tipos de Selectores:
     - Tipo Elemento: Ejemplo: h1, p, a, div
-    - Tipo propiedad: Ejemplo: hover, focus
+    - Tipo propiedad: Ejemplo: :hover, :focus
     - Tipo clase: Ejemplo .titulo
     - Tipo identificador: Ejemplo #miId
+
+8. Teoria de HTML
+  - Terminos:
+    - Renderizar: Cuando se muestra un elemento o etiqueta en el DOM
