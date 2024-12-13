@@ -10,3 +10,16 @@
     border-color: blue;
     cursor: pointer;
 }
+
+.button-secondary {
+    color: white;
+    background-color: #9a9aa7;
+    border: 1px solid #9a9aa7;
+    border-radius: 2px;
+}
+
+.button-secondary:hover {
+    background-color: #7e7e87;
+    border-color: #7e7e87;
+    cursor: pointer;
+}
