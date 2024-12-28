@@ -79,3 +79,20 @@ bug => bicho
 8. Teoria de HTML
   - Terminos:
     - Renderizar: Cuando se muestra un elemento o etiqueta en el DOM
+
+9. Teoria de JS (javascript)
+  - Que hace el JS:
+    - Comunicarse con backend: 
+        - Obtener datos que vienen del backend (base de datos) y mostrarlos al usuario
+    - Manipular el DOM: 
+        - renderizar elementos o manipulacion del DOM
+    - Reaccionar a las acciones del usuario: 
+        - obtener lo que el usuario va ingresando a la pantalla o reaccionar a lo que va seleccionado
+        - click
+        - escribir
+        - scroll
+        - doble click
+        - click derecho
+        - zoom
+        - rasize
+        - drag and drop (arrastrar y soltar)
