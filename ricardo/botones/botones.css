@@ -11,6 +11,12 @@
     cursor: pointer;
 }
 
+.button-primary:focus {
+    background-color: red;
+    border-color: red;
+    cursor: pointer;
+}
+
 .button-secondary {
     color: white;
     background-color: #9a9aa7;
