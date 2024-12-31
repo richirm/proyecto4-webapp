@@ -96,3 +96,11 @@ bug => bicho
         - zoom
         - rasize
         - drag and drop (arrastrar y soltar)
+
+10. Tipos de tareas:
+  - Features
+      Una nueva funcionalidad
+  - Hotfix
+      Correcciones de bugs en produccion
+  - Refactorizar
+      Ajustes en el codigo para que sea de calidad y buenas practicas
