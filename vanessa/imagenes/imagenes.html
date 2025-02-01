@@ -11,6 +11,36 @@
         <script src="./imagenes.js"></script>
     </head>
     <body>
-        <img src="../../assets/images/videoJuego01.png" alt="este imagen es un video juego" />
+        <img onclick="clickImagen('videoJuego01', this)" 
+             ondblclick="handleDoubleClick('videoJuego01', this)" 
+             class="img-success" src="../../assets/images/videoJuego01.png" 
+             alt="este imagen es un video juego"
+             draggable="true" 
+             ondrag="onDragImagen(this)"/>
+
+        <img onclick="clickImagen('pixel', this)" 
+            ondblclick="handleDoubleClick('videoJuego01', this)" 
+            class="img-warning" src="../../assets/images/pixel.png" 
+            alt="este imagen es un video juego"
+            draggable="true" 
+            ondrag="onDragImagen(this)" />
+        <img onclick="clickImagen('soldado', this)" 
+             ondblclick="handleDoubleClick('videoJuego01', this)" 
+             class="img-danger" src="../../assets/images/soldado.png" 
+             alt="este imagen es un video juego"
+             draggable="true" 
+             ondrag="onDragImagen(this)"/>
+        <img onclick="clickImagen('heroe', this)" 
+             ondblclick="handleDoubleClick('videoJuego01', this)" 
+             class="img-dark" src="../../assets/images/heroe.png" 
+             alt="este imagen es un video juego"
+             draggable="true" 
+             ondrag="onDragImagen(this)" />
+        <img onclick="clickImagen('zodiaco', this)" 
+             ondblclick="handleDoubleClick('videoJuego01', this)" 
+             class="img-ligth" src="../../assets/images/zodiaco.png" 
+             alt="este imagen es un video juego" 
+             draggable="true" 
+             ondrag="onDragImagen(this)"/>
     </body>
 </html>

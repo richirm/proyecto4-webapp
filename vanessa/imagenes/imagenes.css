@@ -1,0 +1,37 @@
+img {
+    width:150px;
+    border:1px solid red;
+    height: 150px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+}
+
+img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.img-success {
+    border-color: rgb(33, 117, 40)
+}
+
+.img-warning {
+    border-color: rgb(226 190 56);
+}
+
+.img-danger {
+    border-color: #e95656;
+}
+
+.img-ligth {
+    border-color: rgb(251 250 243);
+}
+
+.img-dark {
+    border-color: #000000;
+}
+
