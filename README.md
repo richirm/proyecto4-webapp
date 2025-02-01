@@ -104,3 +104,6 @@ bug => bicho
       Correcciones de bugs en produccion
   - Refactorizar
       Ajustes en el codigo para que sea de calidad y buenas practicas
+
+11. Accesibilidad
+  - Nuestra pagina web tiene que estar preparada para personas con discapacidad
