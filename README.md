@@ -62,7 +62,48 @@ bug => bicho
 
 6. Terminos
    - workspace: carpeta donde estan tus proyectos
+   - SEO: Posicionamiento de tu web en los buscadores
+   - DOM: Document Object Model , la interpretacion o ejecución de mi HTML en el navegador
 
 // Reto: crear un archivo nuevo y subir al repositorio
 // Reto: crear otro archivo nuevo y subir al repositorio
 // Reto: resolver un conflicto
+
+7. Teoria CSS:
+  - Tipos de Selectores:
+    - Tipo Elemento: Ejemplo: h1, p, a, div
+    - Tipo propiedad: Ejemplo: :hover, :focus
+    - Tipo clase: Ejemplo .titulo
+    - Tipo identificador: Ejemplo #miId
+
+8. Teoria de HTML
+  - Terminos:
+    - Renderizar: Cuando se muestra un elemento o etiqueta en el DOM
+
+9. Teoria de JS (javascript)
+  - Que hace el JS:
+    - Comunicarse con backend: 
+        - Obtener datos que vienen del backend (base de datos) y mostrarlos al usuario
+    - Manipular el DOM: 
+        - renderizar elementos o manipulacion del DOM
+    - Reaccionar a las acciones del usuario: 
+        - obtener lo que el usuario va ingresando a la pantalla o reaccionar a lo que va seleccionado
+        - click
+        - escribir
+        - scroll
+        - doble click
+        - click derecho
+        - zoom
+        - rasize
+        - drag and drop (arrastrar y soltar)
+
+10. Tipos de tareas:
+  - Features
+      Una nueva funcionalidad
+  - Hotfix
+      Correcciones de bugs en produccion
+  - Refactorizar
+      Ajustes en el codigo para que sea de calidad y buenas practicas
+
+11. Accesibilidad
+  - Nuestra pagina web tiene que estar preparada para personas con discapacidad
