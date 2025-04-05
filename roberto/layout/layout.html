@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Practica con layout</title>
+    <link rel="icon" href="../../assets/images/dog.png" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Esta es una demo de uso de layout" />
+    <meta name="keywords" content="layout,html,frontend,iconos" />
+
+    <link rel="stylesheet" href="./layout.css" />
+    <script src="./layout.js"></script>
+    <script src="https://kit.fontawesome.com/f0393cc5b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../assets/css/botones.css" />
+    <link rel="stylesheet" href="../cards/cards.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="header-button -header-menu" title="Abrir menú" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="header-button header-logo">
+            <img src="../../assets/images/carro02.png" />
+        </div>
+        <div class="header-buscador">
+            <input type="text" placeholder="Buscar..." />
+        </div>
+        <div class="header-button header-usuario" title="Ver usuario">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="header-button header-carrito" title="Carrito de compras">
+            <i class="fa fa-cart-shopping"></i>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <div class="nav-item nav-item--seleccionado" onclick="onClickMenuItem(this)">
+                <i class="fa fa-car"></i>
+                <span>Carros</span>
+
+            </div>
+
+            <div class="nav-item" onclick="onClickMenuItem(this)">
+                <i class="fa fa-image"></i>
+                <span>Videojuegos</span>
+
+            </div>
+
+            <div class="nav-item" onclick="onClickMenuItem(this)">
+                <i class="fa fa-ghost"></i>
+                <span>Ovni</span>
+
+            </div>
+
+        </nav>
+
+        <div class="content">
+            <div class="cards-container">
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro01.png" />
+                        <div class="card-head-porcentaje">-50%</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Auto
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            auto color rojo modelo hamer i837uhshiaiajzjj
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 5000.00
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 10.000
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning"
+                            onclick="agregarProducto('auto','auto color rojo modelo hamer i837uhshiaiajzjj', 10000, 5000, '-50%')">agregar
+                            al carrito</button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro02.png" />
+                        <div class="card-head-porcentaje">-10</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Auto
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            auto deportivo color negro modelo px jdhhdjdjidid
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 15.000
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 30.000
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning"
+                            onclick="agregarProducto('auto','auto deportivo color negro modelo px jdhhdjdjidid', 30000, 15000, '-10%')">agregar
+                            al carrito</button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro03.png" />
+                        <div class="card-head-porcentaje">-29%</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Hyundai
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            TV Hyundai 32" LED HD Roku HYLED3257RIM
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 399.00
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 699.00
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning">agregar al carrito</button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro04.png" />
+                        <div class="card-head-porcentaje">-29%</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Hyundai
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            TV Hyundai 32" LED HD Roku HYLED3257RIM
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 399.00
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 699.00
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning">agregar al carrito</button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro05.png" />
+                        <div class="card-head-porcentaje">-29%</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Hyundai
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            TV Hyundai 32" LED HD Roku HYLED3257RIM
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 399.00
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 699.00
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning">agregar al carrito</button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro06.png" />
+                        <div class="card-head-porcentaje">-29%</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Hyundai
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            TV Hyundai 32" LED HD Roku HYLED3257RIM
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 399.00
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 699.00
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning">agregar al carrito</button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <img src="../../assets/images/carro07.png" />
+                        <div class="card-head-porcentaje">-29%</div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="card-body-titulo">
+                            Hyundai
+                        </div>
+
+                        <div class="card-body-descripcion">
+                            TV Hyundai 32" LED HD Roku HYLED3257RIM
+                        </div>
+
+                        <div class="card-body-oferta">
+                            S/ 399.00
+                        </div>
+
+                        <div class="card-body-precio">
+                            S/ 699.00
+                        </div>
+
+                    </div>
+
+                    <div class="card-foot">
+                        <button class="button-warning">agregar al carrito</button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <div>Chabacal.SA</div>
+            <div>Tlf: 01 52602001</div>
+            <div>Dirección: Av. los proceres 123</div>
+            <div>Correo: chabacal12@gmail.com</div>
+        </div>
+        <div class="footer-rigth">
+            <div>Siguenos en:</div>
+            <div>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"> <i class="fa fa-twitter"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"> <i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
