@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Practica con layout</title>
+    <link rel="icon" href="../../assets/images/images.png" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Esta es una demo de layout" />
+    <meta name="keywords" content="layout,frontend,iconos" />
+
+    <link rel="stylesheet" href="./layout.css" />
+    <script src="./layout.js"></script>
+    <link rel="stylesheet" href="../../assets/css/botones.css" />
+
+    <script
+      src="https://kit.fontawesome.com/f0393cc5b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../cards/cards.css" />
+  </head>
+
+  <body>
+    <header>
+      <div
+        class="header-button header-menu"
+        title="Ver menú"
+        onclick="toggleMenu()"
+      >
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="header-logo">
+        <img src="../../assets/images/images.png" />
+      </div>
+      <div class="header-buscador">
+        <input type="text" placeholder="buscar" />
+      </div>
+      <div class="header-button header-usuario">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="header-button header-carrito" title="Ver compras">
+        <i class="fa fa-cart-shopping"></i>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <div
+          class="nav-item nav-item--seleccionado"
+          onclick="onClickMenuItem(this)"
+        >
+          <i class="fa-solid fa-car"></i>
+          <span> Carros </span>
+        </div>
+        <div class="nav-item" onclick="onClickMenuItem(this)">
+          <i class="fa-solid fa-image"></i>
+          <span> videos juego </span>
+        </div>
+        <div class="nav-item" onclick="onClickMenuItem(this)">
+          <i class="fa-solid fa-ghost"></i>
+          <span> Ovnis </span>
+        </div>
+      </nav>
+
+      <div class="cards-container">
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/zodiaco.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">video juego heroe</div>
+            <div class="card-body-descripcion">
+              video juego heroe rescata y vuela
+            </div>
+
+            <div class="card-body-oferta">S/ 199.00</div>
+
+            <div class="card-body-precio">S/ 209.00</div>
+          </div>
+          <div class="card-foot">
+            <button
+              class="button-warning"
+              onclick="agregarProducto('video juego heroe', 'video juego heroe rescata y vuela', 209.00, 199.00, '10%')"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/zodiaco.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Super Mario bross</div>
+            <div class="card-body-descripcion">
+              Super Mario bross clasico + Yoshi
+            </div>
+
+            <div class="card-body-oferta">S/ 199.00</div>
+
+            <div class="card-body-precio">S/ 299.00</div>
+          </div>
+          <div class="card-foot">
+            <button
+              class="button-warning"
+              onclick="agregarProducto('Super Mario bross', 'Super Mario bross clasico + Yoshi', 299.00, 199.00, '5%')"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/mario06.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/soldado.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/pixel.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/heroe.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/consola.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/videoJuego01.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/images.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head">
+            <img src="../../assets/images/zodiaco.png" />
+            <div class="card-head-porcentaje">-29%</div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-titulo">Hyundai</div>
+            <div class="card-body-descripcion">
+              TV Hyundai 32" LED HD Roku HYLED3257RIM
+            </div>
+
+            <div class="card-body-oferta">S/ 399.00</div>
+
+            <div class="card-body-precio">S/ 699.00</div>
+          </div>
+          <div class="card-foot">
+            <button class="button-warning">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-left">
+        <div>Chabacal.SA</div>
+        <div>Tlf: 01 52602001</div>
+        <div>Dirección: Av. los proceres 123</div>
+        <div>Correo: chabacal12@gmail.com</div>
+      </div>
+      <div class="footer-right">
+        <div>Siguenos en:</div>
+        <div>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://www.twitter.com/" target="_blank">
+            <i class="fa fa-twitter"></i
+          ></a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <i class="fa fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
