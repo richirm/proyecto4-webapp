@@ -237,6 +237,38 @@ function obtenerAlumno() {
         alumno1.nombre = 'ricardo';
         console.log(alumno4);
         console.log(alumno3);
+
+           // objetos anidados
+    const alumno5 = {
+        nombre: 'ric',
+        primerApellido: 'ros',
+        segundoApellido: 'mald',
+        edad: 35,
+        fechaNacimiento: '01/11/1989',
+        gastaCine: true,
+        otro: 'hola',
+        direccion: {
+            calle: 'Jr. Pacaritambo',
+            numero: '193',
+            distrito: 'Independencia',
+            provincia: 'Lima',
+            departamento: 'Lima'
+        },
+        padre: {
+            nombre: 'David',
+            primerApellido: 'Rosales',
+            segundoApellido: 'Molina',
+            direccion: {
+                calle: 'Jr. Las Dalias',
+                numero: '123',
+                distrito: 'Villa Maria',
+                provincia: 'Lima',
+                departamento: 'Lima'
+            },
+            fechaNacimiento: '15-01-1968'
+        }
+    };
+    console.log(alumno5);
 }
 
 function comprarCarro() {
@@ -269,5 +301,304 @@ function comprarCarro() {
 
     delete carro1.precio;
     console.log(carro1);
+
+    const carro3 = {
+        marca: 'hyundai',
+        modelo: 'elantra',
+        categoria: 'seddan',
+        añoFabricacion: 2016,
+        fechaCompra: '28/09/2022',
+        esNuevo: false,
+        direccionDuenio: {
+            calle: 'jr jose rufino',
+            numero: '599',
+            distrito: 'San juan de miraflores',
+            provincia: 'Lima',
+            departamento: 'Lima',
+        },
+        }
+    console.log(carro3);
+}
+
+function obtenerObjeto () {
+    const zapatilla1 = {
+        color: 'verde',
+        marca: 'nike',
+        precio: '200 soles',
+        procedencia: 'china',
+        material: 'caucho',
+        hacesudar: false,
+    };
+
+    const zapatilla2 = {
+        color: 'blanco',
+        marca: 'puma',
+        precio: '150 soles',
+        procedencia: 'EE.UU',
+        material: 'lona',
+        hacesudar: true,
+     };
+     console.log (zapatilla1, zapatilla2)
+
+     const futbolista1 = {
+        persona: {
+            nombre: 'Cristiano',
+            edad: 38,
+            direccion: 'jose rufino',
+        },
+        equipo: 'Real Madrid',
+        pais: 'España',
+        sueldo: '2 soles',
+        ganoBalon: true,
+    };
+
+    const futbolista2 = {
+        persona: {
+            nombre: 'Messi',
+            edad: 40,
+            direccion: 'san juan',
+        },
+        equipo: 'barcelona',
+        pais: 'España',
+        sueldo: '10 soles',
+        ganoBalon: false,
+       
+     };
+     console.log (futbolista1, futbolista2);
+
+     const equipo1 = {
+        nombre: 'Barcelona',
+        pais: 'España',
+        futbolista: futbolista1,
+     };
+
+     const equipo2 = {
+        nombre: 'Real Madrid',
+        pais: 'España',
+        futbolista: {...futbolista2},
+     };
+
+     console.log (equipo1, equipo2);
+
+     futbolista1.persona.nombre = 'roberto';
+
+     futbolista2.persona.nombre = 'antonio';
+
+     console.log (equipo1, equipo2);
+
+     const futbolista3 = {
+        edad: 34,
+        signo: 'virgo',
+     };
+     
+     const futbolista4 = {
+        nombre: 'roberto',
+        apellido: 'rosales',
+     };
+
+     const futbolista5 = {
+        ...futbolista3,
+        ...futbolista4
+     };
+
+     console.log(futbolista5);
+}
+
+// Arrays (listado o conjunto de cosas)
+function obtenerArreglos() {
+    const vacio = [];
+    console.log(vacio);
+
+    // Arrays de tipos primitivos
+    const nombreAlumnos = ['Ricardo', 'Roberto', 'Vanessa']; // array de strings
+    console.log(nombreAlumnos);
+
+    const edadAlumnos = [11, 9, 15]; // array de numbers
+    console.log(edadAlumnos);
+
+    const gustaCineList = [true, false, true, true]; // array de booleanos
+    console.log(gustaCineList);
+
+     // operacion: agregar elementos al array
+     nombreAlumnos.push('Pepito');
+     edadAlumnos.push(12);
+     gustaCineList.push(false);
+
+     console.log(nombreAlumnos, edadAlumnos, gustaCineList);
+
+     nombreAlumnos.unshift('Pepita');
+     edadAlumnos.push(10);
+     gustaCineList.push(true);
+
+     console.log(nombreAlumnos, edadAlumnos, gustaCineList);
+
+    //ejercicios
+
+    const modelosAutos = ['123Mazda', '123Lamborgini', '123Nissan']; 
+    console.log(modelosAutos);
+
+    const anioFabricacion = [2018, 2024, 2023]; 
+    console.log(anioFabricacion);
+    
+    const esAutomatico = [true, false, false, ]; 
+    console.log(esAutomatico);
+
+    //insertar
+
+    modelosAutos.push('123hammer');
+    anioFabricacion.push(2026);
+    esAutomatico.push(true);
+
+    console.log(nombreAlumnos, edadAlumnos, gustaCineList);
+
+    modelosAutos.unshift('123elantra');
+    anioFabricacion.unshift(2016);
+    esAutomatico.unshift(false);
+
+    
+    console.log(modelosAutos, anioFabricacion, esAutomatico);
+
+    // posicion de un elemento de un array
+    console.log(nombreAlumnos[1]); // forma estatica
+    console.log(nombreAlumnos[3]); // forma estatica
+    console.log(nombreAlumnos[nombreAlumnos.length - 1]);  // ultima posicion  forma dinamica
+    // array.length - 18
+
+    console.log(modelosAutos[2]); 
+    console.log(modelosAutos[1]); 
+    console.log(modelosAutos[modelosAutos.length - 1]);  
+
+    
+    // modificacion
+    nombreAlumnos[1] = 'Ric';
+    nombreAlumnos[nombreAlumnos.length - 1] = 'Pep';
+    console.log(nombreAlumnos);
+
+    modelosAutos[1] = '123Fortuner';
+    modelosAutos[modelosAutos.length - 1] = '123Escarabajo';
+    console.log(modelosAutos);
+
+    
+    // eliminar
+    nombreAlumnos.splice(1, 1);
+    console.log(nombreAlumnos);
+
+    modelosAutos.splice(3, 1);
+    console.log(modelosAutos);
+
+    
+    const nombresFiltrados = nombreAlumnos.filter((nombre) => {
+        return nombre !== 'Pepita';
+    });
+    console.log(nombresFiltrados);
+
+    
+    const autosFiltrados = modelosAutos.filter((auto) => {
+        return auto !== 'Lamborgini';
+    });
+    console.log(autosFiltrados);
+
+    const autosFiltrados2 = modelosAutos.filter((modelo) => {
+        return modelo !== 'elantra';
+    });
+    console.log(autosFiltrados2);
+
+    const autosFiltrados3 = modelosAutos.filter((modelo, index) => {
+        return (index >2);
+    });
+    console.log(autosFiltrados3);
+
+    
+    // una funcion puede ejecutar internamente a otra funcion
+    // la funcion puede devolver un valor usando el return
+    // la funcion flecha reemplaza a la funcion tradicional en el filtrer, map
+    // el filter necesita ejecutar una funcion, la funcion debe devolver con el return un valor boleano
+
+    const nombresMapeados1 = nombreAlumnos.map((nombre) => {
+        return nombre.replaceAll('OTRO:', '');
+    });
+    console.log(nombresMapeados1);
+
+    const autosMapeados= modelosAutos.map((nombre) => {
+        return nombre.replace('123', '');
+    });
+    console.log(autosMapeados);
+
+    const nombreAlumnos2 = ['Ricardo', 'Roberto', 'Vanessa']; // array 
+    const nombresMapeados2 = nombreAlumnos2.map((nombre) => {
+        return nombre.toLowerCase();
+    });
+    console.log(nombreAlumnos2, nombresMapeados2);
+    // identico
+    // similar
+    // diferente
+
+    const modelosAutos1 = ['123Mazda', '123Lamborgini', '123Nissan']; 
+    const autosMapeados1 = modelosAutos1.map((nombre) => {
+        return nombre.replace('123', '');
+    });
+    console.log(modelosAutos1, autosMapeados1);
+
+    const nombreAlumnos3 = ['Pepito', 'Carloncho', 'Jacinta'];
+    // union (concatenación) de arrays
+    const nombreAlumnosTotal = [
+        ...nombreAlumnos2,
+        ...nombreAlumnos3
+    ];
+    console.log(nombreAlumnosTotal);
+
+    const modelosAutos3 = ['escarabajo', 'ferrari', 'honda'];
+
+    const modelosAutosTotal = [
+        ...modelosAutos1,
+        ...modelosAutos3
+    ];
+    console.log(modelosAutosTotal);
+
+    const edadAlumnos2 = [11, 9, 15, 20, 25, 18, 23, 30]; // array de numbers
+    let sumaEdadesTotal = 0;
+    edadAlumnos2.forEach((edad) => {
+        sumaEdadesTotal = sumaEdadesTotal + edad;
+    });
+    console.log(sumaEdadesTotal);
+
+    //ejercicio
+ 
+    const costoAuto = [14000, 3000, 5500, 7000]; // array de numbers
+    let sumaCostoTotal = 0;
+    costoAuto.forEach((costo) => {
+        sumaCostoTotal = sumaCostoTotal + costo;
+    });
+    console.log(sumaCostoTotal);
+    
+    const unioncostos = edadAlumnos2.join('-');
+    console.log(unioncostos);
+
+    const unionAutos = modelosAutos3.join(', ');
+    console.log(unionAutos);
+
+    
+    // every : todos
+    const sonTodosMayoresEdad = edadAlumnos2.every((edad) => {
+        return edad >= 18;
+    });
+    console.log(sonTodosMayoresEdad);
+    // some : alguno
+    const hayMayoresEdad = edadAlumnos2.some((edad) => {
+        return edad >= 18;
+    });
+    console.log(hayMayoresEdad);
+
+    //ejercicios
+
+    const sonCarosAutos = costoAuto.every((costo) => {
+        return costo >= 3000;
+    });
+    console.log(sonCarosAutos);
+
+    const elCostoesSuperior = costoAuto.some((costo) => {
+        return costo >= 5500;
+    });
+    console.log(elCostoesSuperior);
 
 }
