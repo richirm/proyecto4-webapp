@@ -177,7 +177,8 @@ function obtenerAlumno() {
         edad: 35,
         fechaNacimiento: '01/11/1989',
         gastaCine: true,
-        otro: 'hola'
+        otro: 'hola',
+        
     };
 
     const alumno2 = {
@@ -223,4 +224,251 @@ function obtenerAlumno() {
     console.log(alumno4);
     console.log(alumno3);
 
+    // objetos anidados
+    const alumno5 = {
+        nombre: 'ric',
+        primerApellido: 'ros',
+        segundoApellido: 'mald',
+        edad: 35,
+        fechaNacimiento: '01/11/1989',
+        gastaCine: true,
+        otro: 'hola',
+        direccion: {
+            calle: 'Jr. Pacaritambo',
+            numero: '193',
+            distrito: 'Independencia',
+            provincia: 'Lima',
+            departamento: 'Lima'
+        },
+        padre: {
+            nombre: 'David',
+            primerApellido: 'Rosales',
+            segundoApellido: 'Molina',
+            direccion: {
+                calle: 'Jr. Las Dalias',
+                numero: '123',
+                distrito: 'Villa Maria',
+                provincia: 'Lima',
+                departamento: 'Lima'
+            },
+            fechaNacimiento: '15-01-1968'
+        }
+    };
+
+    console.log(alumno5);
+}
+
+function obtenerObjeto() {
+    const andamio1 = {
+        color: 'caramelo',
+        fechaCreacion: '2024-05-15',
+        altura: '2m',
+        ancho: '1.5m',
+        grosor: '40cm',
+        numCompartimientos: 10,
+        material: 'Melamine'
+    };
+    const andamio2 = {
+        color: 'caramelo',
+        fechaCreacion: '2024-12-25',
+        altura: '1m',
+        ancho: '2m',
+        grosor: '40cm',
+        numCompartimientos: 8,
+        material: 'Melamine'
+    };
+    console.log(andamio1, andamio2);
+
+    // bien tabulado y formateado
+    // nombrar correctamente las variables (camelCase, no caracteres especiales)
+    // el nombre de las variables de objetos tienen que ser genericas y especifica que represente a la clase a la que pertenece
+
+    const libro1 = {
+        titulo: 'Mátematica',
+        fechaCreacion: '2020-01-01',
+        autor: {
+            nombre: 'Pepito Gonzales',
+            edad: 60,
+            direccion: 'Av. algo 123',
+        },
+        numPaginas: 120,
+        material: 'Fibra de pino',
+    };
+
+    const libro2 = {
+        titulo: 'Física',
+        fechaCreacion: '2022-01-01',
+        autor: {
+            nombre: 'Albert Einstein',
+            edad: 90,
+            direccion: 'Av. eeuu 456',
+        },
+        numPaginas: 250,
+        material: 'Fibra de caoba',
+    };
+    console.log(libro1, libro2);
+
+    // colocar los nombre de los atributos lo mas precisos y de acuerdo al valor que va a contener
+    // el tipo de dato del valor del atributo depende del valor que va a contener y debe ser coherente con la realidad
+
+    // 
+    const nombre1 = 'Pepito';
+    const persona1 = {
+        nombre: nombre1,
+        primerApellido: 'Gonzales',
+        segundoApellido: 'Suarez',
+        andamio: andamio1,
+        libro: libro1
+    };
+    const persona2 = {
+        nombre: 'Lupita',
+        primerApellido: 'Jacinta',
+        segundoApellido: 'Moles',
+        andamio: {...andamio2},
+        libro: {...libro2}
+    };
+    console.log(persona1, persona2);
+
+    andamio1.color = 'verde';
+    console.log(persona1);
+
+    andamio2.color = 'negro';
+    console.log(persona2, andamio2);
+
+    // concatenamos objetos
+    const parsonaParte1 = {
+        nombre: 'Ric',
+        primerApellido: 'Ros',
+    };
+    const parsonaParte2 = {
+        segundoApellido: 'Mal',
+        fechaNacimiento: '01/11/1989'
+    };
+
+    // forma moderna (spread operator)
+    const persona3 = {
+        ...parsonaParte1,
+        ...parsonaParte2
+    };
+    console.log(persona3);
+}
+
+// Arrays (listado o conjunto de cosas)
+function obtenerArreglos() {
+    const vacio = [];
+    console.log(vacio);
+
+    // Arrays de tipos primitivos
+    const nombreAlumnos = ['OTRO:RicardoOTRO:', 'OTRO:RobertoOTRO:', 'OTRO:VanessaOTRO:']; // array de strings
+    console.log(nombreAlumnos);
+
+    const edadAlumnos = [11, 9, 15]; // array de numbers
+    console.log(edadAlumnos);
+
+    const gustaCineList = [true, false, true]; // array de booleanos
+    console.log(gustaCineList);
+
+    // operacion: cantidad de elementos
+    console.log(nombreAlumnos.length);
+
+    // operacion: agregar elementos al array
+    nombreAlumnos.push('OTRO:PepitoOTRO:');
+    edadAlumnos.push(12);
+    gustaCineList.push(false);
+
+    console.log(nombreAlumnos, edadAlumnos, gustaCineList);
+
+    nombreAlumnos.unshift('OTRO:PepitaOTRO:');
+    edadAlumnos.unshift(10);
+    gustaCineList.unshift(true);
+
+    console.log(nombreAlumnos, edadAlumnos, gustaCineList);
+
+    // posicion de un elemento de un array
+    console.log(nombreAlumnos[1]); // forma estatica
+    console.log(nombreAlumnos[3]); // forma estatica
+    console.log(nombreAlumnos[nombreAlumnos.length - 1]);  // ultima posicion  forma dinamica
+    // array.length - 18
+
+    // modificacion
+    nombreAlumnos[1] = 'Ric';
+    nombreAlumnos[nombreAlumnos.length - 1] = 'OTRO:Pep';
+    console.log(nombreAlumnos);
+
+    // eliminar
+    nombreAlumnos.splice(1, 1);
+    console.log(nombreAlumnos);
+
+    const nombresFiltrados = nombreAlumnos.filter((nombre) => {
+        return nombre !== 'OTRO:RicardoOTRO:';
+    });
+
+    console.log(nombresFiltrados);
+
+    const nombresFiltrados2 = nombreAlumnos.filter((nombre, index) => {
+        return index !== 1;
+    });
+
+    console.log(nombresFiltrados2);
+
+    // yiyui ljji
+
+
+    // una funcion puede ejecutar internamente a otra funcion
+    // la funcion puede devolver un valor usando el return
+    // la funcion flecha reemplaza a la funcion tradicional en el filtrer, map
+    // el filter necesita ejecutar una funcion, la funcion debe devolver con el return un valor boleano
+
+    const nombreAlumnos2 = ['Ricardo', 'Roberto', 'Vanessa']; // array 
+    const nombresMapeados1 = nombreAlumnos2.map((nombre) => {
+        return true;
+    });
+    console.log(nombreAlumnos2, nombresMapeados1);
+
+    // identico
+    // similar
+    // diferente
+
+    const nombreAlumnos3 = ['Pepito', 'Carloncho', 'Jacinta'];
+
+    // union (concatenación) de arrays
+    const nombreAlumnosTotal = [
+        ...nombreAlumnos2, // spread operator
+        ...nombreAlumnos3
+    ];
+    console.log(nombreAlumnosTotal);
+
+
+    const edadAlumnos2 = [11, 9, 15, 20, 25, 18, 23, 30]; // array de numbers
+    let sumaEdadesTotal = 0;
+
+    edadAlumnos2.forEach((edad) => {
+        sumaEdadesTotal = sumaEdadesTotal + edad;
+    });
+
+    console.log(sumaEdadesTotal);
+
+    let nombresAcumulados = '';
+
+    nombreAlumnos3.forEach((nombre) => {
+        nombresAcumulados = nombresAcumulados + nombre;
+    });
+
+    console.log(nombresAcumulados);
+
+
+    const unionEdades = edadAlumnos2.join(', ');
+    console.log(unionEdades);
+
+    // every : todos
+    const sonTodosMayoresEdad = edadAlumnos2.every((edad) => {
+        return edad >= 18;
+    });
+    console.log(sonTodosMayoresEdad);
+
+    // some : alguno
+    const hayMayoresEdad = edadAlumnos2.some((edad) => {
+        return edad >= 18;
+    });
+    console.log(hayMayoresEdad);
 }
