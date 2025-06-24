@@ -602,3 +602,158 @@ function obtenerArreglos() {
     console.log(elCostoesSuperior);
 
 }
+
+function obtenerArrayObjetos() {
+    const vacio = [];
+    console.log(vacio);
+    const alumnos = [
+        {nombre: 'Ric', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal'},
+        {nombre: 'Van', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi'},
+        {nombre: 'Rob', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal'}
+    ];
+    console.log(alumnos);
+
+    //EJERCICIO
+    const jugadoresFutbol = [
+        {nombre: '12-Messi12-', apellidoPaterno: 'Quispe', apellidoMaterno: 'Mamani', equipo: 'Barcelona'},
+        {nombre: '12-Ronaldo12-', apellidoPaterno: 'Anacleto', apellidoMaterno: 'Anastacio', equipo: 'Alianza'},
+        {nombre: '12-Claudio12-', apellidoPaterno: 'Pizarro', apellidoMaterno: 'Bayili', equipo: 'Cienciano'}
+    ];
+    console.log(jugadoresFutbol);
+
+    jugadoresFutbol.push({nombre: '12-Pepe12-', apellidoPaterno: 'Pizarro', apellidoMaterno: 'Bayili', equipo: 'Portugal'});
+    jugadoresFutbol.unshift({nombre: '12-Maradona12-', apellidoPaterno: 'Huaman', apellidoMaterno: 'Bayili', equipo: 'Argrntina'});
+
+    // console.log(jugadoresFutbol);
+
+    // console.log(jugadoresFutbol.length);
+
+    // console.log(jugadoresFutbol.length);
+    // console.log(jugadoresFutbol[0]);
+    // console.log(jugadoresFutbol[1]);
+    // console.log(jugadoresFutbol[jugadoresFutbol.length - 1]);
+
+    // jugadoresFutbol[0].nombre= 'Chiquito Flores';
+    // console.log(jugadoresFutbol);
+
+    // jugadoresFutbol[4].nombre= {nombre: 'David', apellidoPaterno: 'Rosales', apellidoMaterno: 'Molina', equipo: 'Monte'};
+    // console.log(jugadoresFutbol);
+
+    // jugadoresFutbol.splice(jugadoresFutbol.length - 1, 1);
+    // console.log(jugadoresFutbol);
+    // const jugadoresFutbolFinal = jugadoresFutbol.filter((jugadores) => {
+    //     return jugadores.nombre !== 'Ronaldo';
+    // });
+    // console.log(jugadoresFutbolFinal);
+
+    const nombreJugadores = jugadoresFutbol.filter( (jugadores)=> {
+        return jugadores.apellidoPaterno !== 'Pizarro';
+    });
+
+    console.log(nombreJugadores);
+
+    // const alumnosCorregidos = alumnos.map((alumno) => {
+    //     return {
+    //         nombre: alumno.nombre.replace('OTRO:', ''),
+    //         apellidoPaterno: alumno.apellidoPaterno,
+    //         apellidoMaterno: alumno.apellidoMaterno,
+    //         edad: alumno.edad,
+    //     };
+    // });
+    // console.log(alumnosCorregidos);
+    // const alumnosEdades = alumnos.map((alumno) => {
+    //     return alumno.edad;
+    // });
+    // console.log(alumnosEdades);
+
+    //Ejercicio
+
+     const nombreJugadoresNuevo = nombreJugadores.map((jugador) => {
+        return {
+            nombre: jugador.nombre.replaceAll('12-', ''),
+            apellidoPaterno: jugador.apellidoPaterno,
+            apellidoMaterno: jugador.apellidoMaterno,
+            equipo: jugador.equipo,
+        };
+    });
+    console.log(nombreJugadoresNuevo);
+
+    const jugadoresEquipo = nombreJugadores.map((jugador) => {
+        return jugador.equipo;
+    });
+    console.log(jugadoresEquipo);
+
+    const costoAuto = [8198, 9289, 2899,2989];
+
+    const costoAuto5 = [
+        {precio: 9289},
+        {precio: 1234},
+        {precio: 4321},
+        {precio: 1349}
+    ];
+
+    let sumaCostoTotal = 0;
+    costoAuto.forEach((costo) => {
+        sumaCostoTotal = sumaCostoTotal + costo;
+    });
+    console.log(sumaCostoTotal);
+
+    //ejercicios
+
+      const sonTodosMenores = costoAuto5.every((costo) => {
+        return costo.precio <= 1234;
+    });
+    console.log(sonTodosMenores);
+    
+    const hayalgunequipo = jugadoresFutbol.some((jugador) => {
+        return jugador.equipo.toLowerCase() === 'alianza';
+    });
+    console.log(hayalgunequipo);
+
+    
+    const persona6 = jugadoresFutbol.find((jugadores) => {
+        return jugadores.apellidoPaterno.includes('Pizarro');
+    });
+    console.log(persona6);
+
+    // Array de objetos anidados
+    const alumnos2 = [
+        {
+            nombre: 'OTRO:Ric',
+            apellidoPaterno: 'Ros',
+            apellidoMaterno: 'Mal',
+            edad: 25,
+            ubicacion: {
+                direccion: 'Av. Tomas Valle 123',
+                distrito: 'Olivos',
+                provincia: 'Lima',
+                departamento: 'Lima',
+                pais: 'Peru'
+            }
+        },
+        {nombre: 'OTRO:Van', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+        {nombre: 'OTRO:Rob', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+    ];    
+    console.log(alumnos2);
+
+    // Array de arrays
+    const alumnosTodoPaises = [
+        [
+            {nombre: 'OTRO:Ric', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+            {nombre: 'OTRO:Van', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+            {nombre: 'OTRO:Rob', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+        ],
+        [            
+            {nombre: 'OTRO:Ric2', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+            {nombre: 'OTRO:Van2', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+            {nombre: 'OTRO:Rob2', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+        ],
+        [            
+            {nombre: 'OTRO:Ric3', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+            {nombre: 'OTRO:Van3', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+            {nombre: 'OTRO:Rob3', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+        ]
+    ];
+    
+
+}
