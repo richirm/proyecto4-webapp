@@ -472,3 +472,135 @@ function obtenerArreglos() {
     });
     console.log(hayMayoresEdad);
 }
+
+function obtenerArrayObjetos() {
+    const vacio = [];
+
+    console.log(vacio);
+
+    const alumnos = [
+        {nombre: 'OTRO:Ric', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+        {nombre: 'OTRO:Van', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+        {nombre: 'OTRO:Rob', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+    ];
+
+    console.log(alumnos);
+
+    alumnos.push({nombre: 'OTRO:Ale', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 30});
+    alumnos.unshift({nombre: 'OTRO:Dani', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 15});
+
+    console.log(alumnos);
+
+    console.log(alumnos.length);
+
+    console.log(alumnos[0]);
+    console.log(alumnos[1]);
+    console.log(alumnos[alumnos.length - 1]);
+
+    // alumnos[0].nombre = 'David Daniel';
+    // alumnos[0].apellidoPaterno = 'Rosales';
+    // alumnos[0].apellidoMaterno = 'Maldonado';
+    // console.log(alumnos);
+
+    // alumnos[1] = {nombre: 'Ric2', apellidoPaterno: 'Ros2', apellidoMaterno: 'Mal2', edad: 25};
+    // console.log(alumnos);
+
+    // alumnos.splice(alumnos.length - 1, 1);
+    // console.log(alumnos);
+
+    const alumnosFinal = alumnos.filter((alumno) => {
+        return alumno.nombre !== 'David Daniel';
+    });
+    console.log(alumnosFinal);
+
+    const alumnosMayores = alumnos.filter((alumno, index) => {
+        return alumno.edad >= 0;
+    });
+    console.log(alumnosMayores);
+
+    const alumnosCorregidos = alumnos.map((alumno) => {
+        return {
+            nombre: alumno.nombre.replace('OTRO:', ''),
+            apellidoPaterno: alumno.apellidoPaterno.toUpperCase(),
+            apellidoMaterno: alumno.apellidoMaterno.toUpperCase(),
+            edad: alumno.edad,
+        };
+    });
+
+    console.log(alumnosCorregidos);
+
+    const alumnosEdades = alumnos.map((alumno) => {
+        return alumno.edad;
+    });
+
+    console.log(alumnosEdades);
+
+    let sumaTotalEdades = 0;
+    
+    alumnosEdades.forEach((edad) => {
+        sumaTotalEdades = (sumaTotalEdades + edad);
+    });
+
+    console.log(sumaTotalEdades);
+
+    // every => si todos los elementos del array cumplen con la condición => true | false
+    // some => si algun elemento del array cumple con la condición => true | false
+
+    const sonTodosMayores = alumnos.every((alumno) => {
+        return alumno.edad >= 18;
+    });
+    console.log(sonTodosMayores);
+
+    const hayAlgunChipana = alumnos.some((alumno) => {
+        return alumno.apellidoPaterno === 'Chi';
+    });
+    console.log(hayAlgunChipana);
+
+    const persona4 = alumnos.find((alumno) => {
+        return alumno.nombre.includes('Ric');
+    });
+    console.log(persona4.nombre);
+
+    // Array de objetos anidados
+    const alumnos2 = [
+        {
+            nombre: 'OTRO:Ric',
+            apellidoPaterno: 'Ros',
+            apellidoMaterno: 'Mal',
+            edad: 25,
+            ubicacion: {
+                direccion: 'Av. Tomas Valle 123',
+                distrito: 'Olivos',
+                provincia: 'Lima',
+                departamento: 'Lima',
+                pais: 'Peru'
+            }
+        },
+        {nombre: 'OTRO:Van', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+        {nombre: 'OTRO:Rob', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+    ];    
+
+    console.log(alumnos2);
+
+    // Array de arrays
+    const alumnosTodoPaises = [
+        [
+            {nombre: 'OTRO:Ric', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+            {nombre: 'OTRO:Van', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+            {nombre: 'OTRO:Rob', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+        ],
+        [            
+            {nombre: 'OTRO:Ric2', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+            {nombre: 'OTRO:Van2', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+            {nombre: 'OTRO:Rob2', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+        ],
+        [            
+            {nombre: 'OTRO:Ric3', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 25},
+            {nombre: 'OTRO:Van3', apellidoPaterno: 'Chi', apellidoMaterno: 'Isi', edad: 20},
+            {nombre: 'OTRO:Rob3', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
+        ]
+    ];
+    console.log(alumnosTodoPaises);
+    console.log(alumnosTodoPaises[0][0]);
+
+}               
