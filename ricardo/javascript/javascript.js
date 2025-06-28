@@ -602,5 +602,117 @@ function obtenerArrayObjetos() {
     ];
     console.log(alumnosTodoPaises);
     console.log(alumnosTodoPaises[0][0]);
+}
 
-}               
+function ejecutarCondicionIf() {
+    const estaLloviendo = true;
+
+    if (estaLloviendo === true) {
+        console.log('Si está lloviendo');
+    }
+
+    const tengoDinero = false;
+    if (tengoDinero === true) {
+        console.log('Compro pollito a la brasa');
+    } else {
+        console.log('Preparo mi cena');
+    }
+
+    const tengoPlay = false;
+    const tengoNintendo = false;
+    if (tengoPlay === true) {
+        console.log('Voy a jugar play');
+    } else if (tengoNintendo === true) {
+        console.log('Voy a jugar nintendo');
+    } else {
+        console.log('Voy a jugar con la pelota');
+    }
+
+    const tengoDinero2 = false;
+    const estaAbiertoPolleria = false;
+    if (tengoDinero2 === true && estaAbiertoPolleria === true) {
+        console.log('Compro pollito a la brasa');
+    } else {
+        console.log('Preparo mi cena');
+    }
+
+    const robertDaPropina = false;
+    const daniDaPropina = false;
+    if (robertDaPropina === true || daniDaPropina === true) {
+        console.log('Me compro mi bicicleta');
+    } else {
+        console.log('Juego con mi mano');
+    }
+
+    const a = true;
+    const b = false;
+    const c = false;
+    // if ((voyParque === true && tengoPelota === true) || (voyParque === true && tengoScuter === true)) {
+    if (a && (b || c)) { 
+        console.log('juego en el parque');
+    } else {
+        console.log('me quedo en casa');
+    }
+
+    var tengoTiempo = false;
+    if (tengoTiempo) {
+        console.log('Veo pelicula');
+    } else {
+        console.log('Realizar tarea');
+    }
+
+    // Operador ternario
+    tengoTiempo ? console.log('Veo pelicula') : console.log('Realizar tarea');
+
+}
+
+function ejecutarCondicionSwitch() {
+    const codigoPais = 'COL';
+
+    switch (codigoPais) {
+        case 'PE':
+            console.log('Es de Peru');
+            break;
+
+        case 'COL':
+            console.log('Es de Colombia');
+            break;
+        
+        case 'AR':
+            console.log('Es de Argentina');
+            break;
+
+        case 'ESP':
+            console.log('Es de España');
+            break;
+
+        default:
+            console.log('Es de un pais desconocido');
+    };
+
+    const numero1 = 20;
+    const numero2 = 40;
+    const operacion = 'suma';
+
+    switch (operacion) {
+        case 'suma':
+            console.log(numero1 + numero2);
+            break;
+
+        case 'resta':
+            console.log(numero1 - numero2);
+            break;
+
+        case 'multiplicacion':
+            console.log(numero1 * numero2);
+            break;
+
+        case 'division':
+            console.log(numero1 / numero2);
+            break;
+
+        default:
+            console.log('operacion desconocida');
+    };
+
+}
