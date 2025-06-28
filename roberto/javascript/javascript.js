@@ -754,6 +754,149 @@ function obtenerArrayObjetos() {
             {nombre: 'OTRO:Rob3', apellidoPaterno: 'Ros', apellidoMaterno: 'Mal', edad: 26}
         ]
     ];
+}
+
+function ejecutarCondicionIf() {
+    const estaLloviendo = false ;
+    if (estaLloviendo === true) {
+        console.log('Si está lloviendo');
+    }
+
+//practica
+   
+    const tengoAuto = false;
+    if (tengoAuto === true) {
+        console.log('Si tengo auto');
+    }
+//practica2
+
+    const serePolicia = false;
+    if (serePolicia === true) {
+        console.log('Si sere policia');
+    } else {
+        console.log('sere serenazgo');
+    }
+
+    const tengoPlay = false;
+    const tengoNintendo = false;
+    if (tengoPlay === true) {
+        console.log('Voy a jugar play');
+    } else if (tengoNintendo === true) {
+        console.log('Voy a jugar nintendo');
+    } else {
+        console.log('Voy a jugar con la pelota');
+    }
+
+//ejercicios3
+
+   const tengoFrio = true;
+    const tengoCalor = true;
+    if (tengoFrio === false) {
+        console.log('Me pongo chompa');
+    } else if (tengoCalor === false) {
+        console.log('Voy a la playa');
+    } else {
+        console.log('salgo a la calle');
+    }
+
+    const tengoDinero2 = false;
+    const estaAbiertoPolleria = false;
+    if (tengoDinero2 === true && estaAbiertoPolleria === true) {
+        console.log('Compro pollito a la brasa');
+    } else {
+        console.log('Preparo mi cena');
+    }
+
+    //ejercicio
+
+    const voyDisparar = true;
+    const siTengoBalas = false;
+    if (voyDisparar === true && siTengoBalas === true) {
+        console.log('al delincuente');
+    } else {
+        console.log('me voy a mi casa');
+    }
+// ejercicio 2
+    const ireEntaxi = true;
+    const ireEnMicro = false;
+    if (ireEntaxi === true || ireEnMicro === true) {
+        console.log('al Hospital');
+    } else {
+        console.log('me quedo en casa');
+    }
+
+      const tengoPelota = false;
+    const voyParque = false;
+    const tengoScuter = false;
+    // if ((voyParque === true && tengoPelota === true) || (voyParque === true && tengoScuter === true)) {
+    if (voyParque && (tengoPelota || tengoScuter)) { 
+        console.log('juego en el parque');
+    } else {
+        console.log('me quedo en casa');
+    }
+
+    //ejercicio
+
+    const sereDoctor = true;
+    const voyUniversidad = false;
+    const serePediatra = true;
+    if (voyUniversidad && (sereDoctor || serePediatra)) { 
+        console.log('ganare dinero');
+    } else {
+        console.log('estare misio');
+    }
+
     
+    var tengoTiempo = false;
+    if (tengoTiempo) {
+        console.log('Veo pelicula');
+    } else {
+        console.log('Realizar tarea');
+    }
+    // Operador ternario
+    tengoTiempo ? console.log('Veo pelicula') : console.log('Realizar tarea');
+
+}
+
+function ejecutarCondicionSwitch() {
+    const codigoPais = 'COL';
+    
+    switch (codigoPais) {
+        case 'PE':
+            console.log('Es de Peru');
+            break;
+        case 'COL':
+            console.log('Es de Colombia');
+            break;
+        
+        case 'AR':
+            console.log('Es de Argentina');
+            break;
+        case 'ESP':
+            console.log('Es de España');
+            break;
+        default:
+            console.log('Es de un pais desconocido');
+    }
+
+    //practica
+
+    const numeroCelular = 3333;
+    
+    switch (numeroCelular) {
+        case 2468:
+            console.log('Es de richar');
+            break;
+        case 8642:
+            console.log('Es de rober');
+            break;
+        
+        case 1111:
+            console.log('Es de dani');
+            break;
+
+        default:
+            console.log('Es de persona desconocido');
+    }
 
 }
