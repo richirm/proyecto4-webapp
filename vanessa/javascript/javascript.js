@@ -427,6 +427,31 @@ function obtenerArreglos() {
         return edad >= 18;
     });
     console.log(hayMayoresEdad);
+
+    const alumnosFinal = alumnos.filter((alumno) => {
+      return alumno.nombre  !== 'David Daniel';
+    });
+    console.log(alumnosFinal);
+
+    const alumnosMayores = alumnos.filter((alumno) => {
+      return alumno.edad >= 0;
+    });
+
+    console.log(alumnosMayores);
+    const alumnosCorregidos = alumnos.map((alumno) => {
+        return {
+            nombre: alumno.nombre.replace('OTRO:', ''),
+            apellidoPaterno: alumno.apellidoPaterno,
+            apellidoMaterno: alumno.apellidoMaterno,
+            edad: alumno.edad,
+        };
+    });
+    console.log(alumnosCorregidos);
+    const alumnosEdades = alumnos.map((alumno) => {
+        return alumno.edad;
+    });
+    console.log(alumnosEdades);
+
 }
 
 function obtenerRegalos() {
@@ -515,5 +540,166 @@ function obtenerRegalos() {
         return precio >= 49;
     });
     console.log(hayRegalosCostoso);
-
   }
+
+  function obtenerArrayCursos() {
+    const vacio = [];
+    console.log(vacio);
+    const cursos = [
+        {materia: 'matematica', costo: '20', dia: 'L-S'},
+        {materia: 'comunicacion', costo: '35', dia: 'L-V'},
+        {nombre: 'historia', costo: '40', dia: 'L-V'}
+    ];
+    console.log(cursos);
+
+    cursos.push({materia: 'ingles', costo: '28', dia: 'L-S'});
+    cursos.unshift({materia: 'tecnologia', costo: '90', dia: 'L-V'});
+    console.log(cursos);
+
+    console.log(cursos.length);
+    console.log(cursos[0]);
+    console.log(cursos[1]);
+    console.log(cursos[cursos.length - 1]);
+
+    // cursos[0].materia = 'David Daniel';
+    // cursos[0].costo = 'Rosales';
+    // cursos[0].dia = 'Maldonado';
+    // console.log(cursos);
+    // cursos[1] = {materia: 'Ric2', costo: 'Ros2', dia: 'Mal2'};
+    // console.log(alumnos);
+
+    // cursos.splice(cursos.length - 1, 1);
+    // console.log(cursos);
+    const cursosFinal = cursos.filter((cursos) => {
+        return cursos.materia !== 'Religion';
+    });
+    console.log(cursosFinal);
+
+    const examenFinal = cursos.filter((cursos) => {
+      return cursos.materia  !== 'historia';
+    });
+    console.log(examenFinal);
+
+    const examenRezagados = cursos.filter((cursos) => {
+      return cursos.costo != '35';
+    });
+    console.log(examenRezagados);
+
+    // const examenCorregidos = cursos.map((cursos) => {
+    //     return {
+    //         materia: cursos.materia.replace('OTRO:', ''),
+    //         materia: cursos.materia,
+    //         materia: cursos.materia,
+    //     };
+    // });
+    // console.log(examenCorregidos);
+    const examenRecuperacion = cursos.map((cursos) => {
+        return cursos.recuperacion;
+    });
+    console.log(examenRecuperacion);
+  }
+    function ejecutarCondicionIf() {
+    const estaLloviendo = true;
+    if (estaLloviendo === true) {
+        console.log('Si está lloviendo');
+    }
+    const tengoDinero = false;
+    if (tengoDinero === true) {
+        console.log('Compro pollito a la brasa');
+    } else {
+        console.log('Preparo mi cena');
+    }
+    const tengoPlay = false;
+    const tengoNintendo = false;
+    if (tengoPlay === true) {
+        console.log('Voy a jugar play');
+    } else if (tengoNintendo === true) {
+        console.log('Voy a jugar nintendo');
+    } else {
+        console.log('Voy a jugar con la pelota');
+    }
+    const tengoDinero2 = false;
+    const estaAbiertoPolleria = false;
+    if (tengoDinero2 === true && estaAbiertoPolleria === true) {
+        console.log('Compro pollito a la brasa');
+    } else {
+        console.log('Preparo mi cena');
+    }
+
+    const robertDaPropina = false;
+    const daniDaPropina = false;
+    if (robertDaPropina === true || daniDaPropina === true) {
+        console.log('Me compro mi bicicleta');
+    } else {
+        console.log('Juego con mi mano');
+    }
+
+    const dinaVaMercado = false;
+    const vanessaVaMercado = false;
+    if (dinaVaMercado ===true || vanessaVaMercado === true) {
+      console.log('Me compro una sandía');
+    } else {
+        console.log('Tomo jugo de mango');
+    }
+
+    const tengoPelota = false;
+    const voyParque = false;
+    const tengoScuter = false;
+    // if ((voyParque === true && tengoPelota === true) || (voyParque === true && tengoScuter === true)) {
+    if (voyParque && (tengoPelota || tengoScuter)) {
+        console.log('juego en el parque');
+    } else {
+        console.log('me quedo en casa');
+    }
+
+    const veoPayasos = true;
+    const voyCirco = false;
+    const veoMagos = true;
+    // if ((voyCirco === true && veoPayasos === true) || (voyCirco === true && veoMagos === true)) {
+    if (voyCirco && (veoPayasos || veoMagos)) {
+        console.log('me divierto en el circo');
+    } else {
+        console.log('me quedo en casa');
+    }
+  }
+    function ejecutarCondicionSwitch() {
+    const codigoPais = 'COL';
+    switch (codigoPais) {
+        case 'PE':
+            console.log('Es de Peru');
+            break;
+        case 'COL':
+            console.log('Es de Colombia');
+            break;
+
+        case 'AR':
+            console.log('Es de Argentina');
+            break;
+        case 'ESP':
+            console.log('Es de España');
+            break;
+        default:
+            console.log('Es de un pais desconocido');
+      }
+    }
+
+  function ejecutarSwitch() {
+    const codigoTicket = '0001111';
+    switch (codigoTicket) {
+        case '32154':
+            console.log('cocina');
+            break;
+        case '00001256':
+            console.log('olla arrocera');
+            break;
+
+        case '0001474':
+            console.log('plancha');
+            break;
+        case '0001489':
+            console.log('bicicleta');
+            break;
+        default:
+            console.log('hervidora');
+      }
+    }
